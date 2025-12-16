@@ -1,42 +1,57 @@
-#root {
-  max-width: 1280px;
+.section {
+  max-width: 1000px;
   margin: 0 auto;
-  padding: 2rem;
+  padding: 40px 20px;
+}
+
+.section-title {
+  font-size: 28px;
+  margin-bottom: 16px; /* reduced gap */
+}
+
+.project-card {
+  background: rgba(255, 255, 255, 0.04);
+  border-left: 4px solid #38bdf8;
+  padding: 20px 24px;
+  border-radius: 10px;
+}
+
+.project-card h3 {
+  margin: 0 0 10px 0; /* NO top margin */
+}
+
+.project-card ul {
+  margin: 0;
+  padding-left: 18px;
+}
+
+.project-card li {
+  margin: 6px 0;
+}
+
+/* Footer */
+.footer {
   text-align: center;
+  padding: 40px 20px 20px;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.footer-links {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  margin-bottom: 12px;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.footer-links a {
+  color: #38bdf8;
+  text-decoration: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.footer-links a:hover {
+  text-decoration: underline;
 }
 
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
+.footer-text {
+  font-size: 14px;
+  opacity: 0.8;
 }

@@ -1,8 +1,10 @@
-import Hero from "./components/Hero.jsx";
-import About from "./components/About.jsx";
-import Skills from "./components/Skills.jsx";
-import Projects from "./components/Projects.jsx";
-import Footer from "./components/Footer.jsx";
+import Hero from "./components/Hero";
+import About from "./components/About";
+import Skills from "./components/Skills";
+import Projects from "./components/Projects";
+import Footer from "./components/Footer";
+
+import "./App.css";
 
 export default function App() {
   return (

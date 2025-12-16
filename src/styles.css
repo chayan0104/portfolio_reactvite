@@ -44,10 +44,18 @@ h2 {
   gap: 0.5rem;
 }
 
-.project {
-  border-left: 3px solid #38bdf8;
-  padding-left: 1rem;
-  margin-top: 0.75rem;
+.projects h2 {
+  margin-bottom: 0.75rem;
+}
+
+.project-card {
+  margin-top: 0;
+  padding: 1.25rem 1.5rem;
+  border-radius: 12px;
+}
+
+.project-card h3 {
+  margin-top: 0;
 }
 
 footer {

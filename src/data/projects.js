@@ -1,7 +1,10 @@
 export default [
   {
-    name: "DevOps Portfolio",
-    description:
-      "Single-page React + Vite portfolio hosted on AWS S3 with custom domain using GoDaddy DNS."
+    company: "Tata Consultancy Services Ltd.",
+    items: [
+      "Citi Bank Singapore",
+      "Citi Bank India",
+      "Bajaj General Insurance"
+    ]
   }
 ];
