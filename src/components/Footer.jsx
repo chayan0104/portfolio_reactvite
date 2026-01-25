@@ -8,9 +8,10 @@ export default function Footer() {
         <a href="https://www.instagram.com/me.chayan/" target="_blank">Instagram</a>
       </div>
 
-      <p className="footer-text">
-        © Chayan Samanta  2025 - Build on : React + Vite · AWS S3 · AWS SSL · CloudFront · GoDaddy
-      </p>
+     <p className="footer-text">
+       © 2025 Chayan Samanta. Built with React + Vite · Deployed on AWS (S3, A, CloudFront) · Domain: GoDaddy
+     </p>
+
     </footer>
   );
 }
