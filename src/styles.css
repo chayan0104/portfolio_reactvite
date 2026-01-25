@@ -1,7 +1,7 @@
 body {
   margin: 0;
   font-family: system-ui, sans-serif;
-  background: #040b29;
+  background: #111019;
   color: #e5e7eb;
 }
 .hero {
@@ -15,7 +15,7 @@ body {
   height: 140px;
   border-radius: 50%;
   object-fit: cover;
-  border: 3px solid #38bdf8;
+  border: 3px solid #ffffff;
   margin-bottom: 1rem;
 }
 

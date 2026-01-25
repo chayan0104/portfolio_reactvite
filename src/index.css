@@ -25,7 +25,7 @@ body {
 .project-card {
   margin-top: 0;      /* 🔥 key fix */
   padding: 1.25rem 1.5rem;
-  border-left: 4px solid #3b82f6;
+  border-left: 4px solid #fbf5f5;
   border-radius: 12px;
   background: rgba(255, 255, 255, 0.03);
 }
@@ -55,7 +55,7 @@ body {
 }
 
 .footer-links a {
-  color: #93c5fd;
+  color: #feffff;
   text-decoration: none;
   font-size: 0.95rem;
 }
@@ -66,5 +66,5 @@ body {
 
 .footer-copy {
   font-size: 0.85rem;
-  color: #9ca3af;
+  color: #ffffff;
 }
