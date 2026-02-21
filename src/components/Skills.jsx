@@ -1,18 +1,41 @@
 export default function Skills() {
-  return (
-    <section className="section">
-      <h2>Skills</h2>
+  const skills = [
+    "AWS",
+    "Azure",
+    "Terraform",
+    "CloudFormation",
+    "Jenkins",
+    "AWS CodePipeline",
+    "CodeDeploy",
+    "GitHub",
+    "Bitbucket",
+    "Docker",
+    "Kubernetes",
+    "Python",
+    "Bash/Shell",
+    "Java",
+    "YAML",
+    "HCL",
+    "CloudWatch",
+    "Grafana",
+    "Checkmarx",
+    "Black Duck",
+    "Fortify",
+    "SonarQube",
+  ];
 
-      <div className="glass-box">
-        <ul className="skills">
-          <li>AWS, Azure</li>
-          <li>CI/CD – Jenkins</li>
-          <li>Linux & Shell</li>
-          <li>Git & GitHub</li>
-          <li>Docker</li>
-          <li>Java, Python</li>
-          <li>SonarQube</li>
-          <li>Checkmarx & Black Duck</li>
+  return (
+    <section className="section" id="skills">
+      <div className="section-heading">
+        <p className="section-kicker">Capabilities</p>
+        <h2>//skills</h2>
+      </div>
+
+      <div className="glass-panel skills-panel">
+        <ul className="skills-compact">
+          {skills.map((item) => (
+            <li key={item}>{item}</li>
+          ))}
         </ul>
       </div>
     </section>
