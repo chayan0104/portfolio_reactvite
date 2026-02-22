@@ -108,6 +108,7 @@ a {
   max-width: 1080px;
   margin: 0 auto;
   padding: 14px 20px 8px;
+  overflow: hidden;
 }
 
 .topbar::before {
@@ -141,8 +142,12 @@ a {
 
 .topbar-nav {
   display: flex;
+  flex: 1;
+  min-width: 0;
+  justify-content: flex-end;
   gap: 8px;
   overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
   scrollbar-width: none;
 }
 
@@ -618,14 +623,22 @@ a:focus-visible,
 }
 
 @media (max-width: 640px) {
+  .topbar {
+    gap: 8px;
+  }
+
   .topbar-brand {
     width: 38px;
     font-size: 0.74rem;
   }
 
+  .topbar-nav {
+    gap: 6px;
+  }
+
   .topbar-nav a {
-    font-size: 0.72rem;
-    padding: 7px 10px;
+    font-size: 0.7rem;
+    padding: 6px 9px;
   }
 
   .hero,
@@ -697,11 +710,26 @@ a:focus-visible,
 
 @media (max-width: 420px) {
   .topbar {
-    padding: 12px;
+    padding: 10px 10px 8px;
+    gap: 6px;
   }
 
   .topbar::before {
-    inset: 7px 6px 0;
+    inset: 6px 4px 0;
+  }
+
+  .topbar-brand {
+    width: 34px;
+    font-size: 0.68rem;
+  }
+
+  .topbar-nav {
+    gap: 4px;
+  }
+
+  .topbar-nav a {
+    font-size: 0.64rem;
+    padding: 6px 8px;
   }
 
   .layout {
