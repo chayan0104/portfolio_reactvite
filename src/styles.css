@@ -479,24 +479,14 @@ a:focus-visible,
 }
 
 .experience-head {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 12px;
-  flex-wrap: wrap;
-  margin-bottom: 12px;
+  margin-bottom: 10px;
 }
 
-.experience-badge {
-  border: 1px solid var(--line-strong);
-  border-radius: 999px;
-  padding: 4px 10px;
-  background: rgba(19, 44, 56, 0.65);
-  color: #c7deef;
-  font-family: "Space Mono", monospace;
-  font-size: 0.7rem;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
+.experience-company {
+  margin: 0;
+  color: #e7f3ff;
+  font-size: 1.18rem;
+  letter-spacing: -0.01em;
 }
 
 .experience-points {
@@ -686,8 +676,8 @@ a:focus-visible,
     width: 100%;
   }
 
-  .experience-head {
-    align-items: flex-start;
+  .experience-company {
+    font-size: 1.02rem;
   }
 
   .about-panel {

@@ -13,11 +13,10 @@ export default function Projects() {
       </div>
 
       <div className="experience-list">
-        {projects.map((project, index) => (
+        {projects.map((project) => (
           <article className="experience-card" key={project.company}>
             <div className="experience-head">
-              <p className="experience-badge">Engagement {String(index + 1).padStart(2, "0")}</p>
-              <h3>{project.company}</h3>
+              <h3 className="experience-company">{project.company}</h3>
             </div>
             <ul className="experience-points">
               {project.items.map((item) => (
