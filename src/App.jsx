@@ -10,6 +10,18 @@ export default function App() {
       <div className="bg-layer bg-layer-one" aria-hidden="true" />
       <div className="bg-layer bg-layer-two" aria-hidden="true" />
 
+      <header className="topbar">
+        <a className="topbar-brand" href="#top" aria-label="Back to top">
+          CS
+        </a>
+        <nav className="topbar-nav" aria-label="Primary navigation">
+          <a href="#about">About</a>
+          <a href="#skills">Skills</a>
+          <a href="#experience">Experience</a>
+          <a href="#connect">Connect</a>
+        </nav>
+      </header>
+
       <main className="layout">
         <Hero />
         <About />

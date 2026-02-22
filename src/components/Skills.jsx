@@ -1,27 +1,29 @@
 export default function Skills() {
-  const skills = [
-    "AWS",
-    "Azure",
-    "Terraform",
-    "CloudFormation",
-    "Jenkins",
-    "AWS CodePipeline",
-    "CodeDeploy",
-    "GitHub",
-    "Bitbucket",
-    "Docker",
-    "Kubernetes",
-    "Python",
-    "Bash/Shell",
-    "Java",
-    "YAML",
-    "HCL",
-    "CloudWatch",
-    "Grafana",
-    "Checkmarx",
-    "Black Duck",
-    "Fortify",
-    "SonarQube",
+  const skillGroups = [
+    {
+      title: "Cloud and Infrastructure",
+      items: ["AWS", "Azure", "Terraform", "CloudFormation"],
+    },
+    {
+      title: "CI/CD and Source Control",
+      items: ["Jenkins", "AWS CodePipeline", "CodeDeploy", "GitHub", "Bitbucket"],
+    },
+    {
+      title: "Containers and Runtime",
+      items: ["Docker", "Kubernetes"],
+    },
+    {
+      title: "Languages and Config",
+      items: ["Python", "Bash/Shell", "Java", "YAML", "HCL"],
+    },
+    {
+      title: "Observability",
+      items: ["CloudWatch", "Grafana"],
+    },
+    {
+      title: "Security Tooling",
+      items: ["Checkmarx", "Black Duck", "Fortify", "SonarQube"],
+    },
   ];
 
   return (
@@ -31,12 +33,17 @@ export default function Skills() {
         <h2>//skills</h2>
       </div>
 
-      <div className="glass-panel skills-panel">
-        <ul className="skills-compact">
-          {skills.map((item) => (
-            <li key={item}>{item}</li>
-          ))}
-        </ul>
+      <div className="skills-grid">
+        {skillGroups.map((group) => (
+          <article className="skill-group" key={group.title}>
+            <h3>{group.title}</h3>
+            <ul className="skills-compact">
+              {group.items.map((item) => (
+                <li key={item}>{item}</li>
+              ))}
+            </ul>
+          </article>
+        ))}
       </div>
     </section>
   );

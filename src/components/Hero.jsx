@@ -1,12 +1,11 @@
 export default function Hero() {
   return (
     <section className="section hero" id="top">
-      <p className="eyebrow">DevOps Engineer</p>
-
       <div className="hero-content">
         <img src="/profile.jpg" alt="Chayan Samanta" className="profile" />
 
-        <div>
+        <div className="hero-copy">
+          <p className="eyebrow">DevOps Engineer</p>
           <h1>
             Chayan <span>Samanta</span>
           </h1>
