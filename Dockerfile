@@ -21,7 +21,6 @@ COPY . .
 # Build the Vite app (outputs to /dist)
 RUN npm run build
 
-
 # ---------- Runtime stage ----------
 FROM nginx:alpine
 
