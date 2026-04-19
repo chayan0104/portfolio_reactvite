@@ -5,7 +5,7 @@ export default function Projects() {
     <section className="section" id="experience">
       <div className="section-heading">
         <p className="section-kicker">Work</p>
-        <h2>//experience</h2>
+        <h2>Experience</h2>
         <p className="section-note">
           Enterprise DevOps delivery across banking and insurance with measurable reliability
           and release-performance impact.

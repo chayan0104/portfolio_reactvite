@@ -231,8 +231,35 @@ a {
 
 .section-heading {
   display: grid;
-  gap: 8px;
-  margin-bottom: 12px;
+  gap: 10px;
+  margin-bottom: 22px;
+}
+
+.section-heading h2 {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  padding-left: 0;
+  font-size: clamp(1.7rem, 3.3vw, 2.8rem);
+}
+
+.section-heading h2::before {
+  content: "⧉";
+  color: var(--brand);
+  font-size: 1.05em;
+  line-height: 1;
+}
+
+.section-heading h2::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 8px;
+  width: 4px;
+  height: calc(100% - 16px);
+  border-radius: 999px;
+  background: rgba(255, 244, 220, 0.18);
 }
 
 .section-kicker,
@@ -289,13 +316,32 @@ h3 {
 .skill-group,
 .experience-card {
   position: relative;
-  border: 1px solid var(--line);
+  border: 1px solid rgba(255, 244, 220, 0.12);
   border-radius: var(--radius-lg);
   background:
-    linear-gradient(180deg, rgba(255, 255, 255, 0.06), transparent 28%),
-    linear-gradient(180deg, var(--surface), var(--surface-strong));
-  box-shadow: var(--shadow-soft);
+    linear-gradient(145deg, rgba(255, 244, 220, 0.12), rgba(20, 22, 27, 0.88)),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.04), rgba(12, 13, 17, 0.96));
   overflow: hidden;
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.34);
+}
+
+.glass-panel::before,
+.skill-group::before,
+.experience-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background:
+    radial-gradient(circle at 18% 18%, rgba(255, 244, 220, 0.10), transparent 22%),
+    radial-gradient(circle at 78% 22%, rgba(233, 221, 192, 0.06), transparent 20%),
+    radial-gradient(circle at 50% 78%, rgba(18, 20, 24, 0.10), transparent 26%);
+  filter: blur(56px);
+  opacity: 0.45;
+  pointer-events: none;
+  mix-blend-mode: screen;
 }
 
 .hero::after,
@@ -317,7 +363,26 @@ h3 {
 }
 
 .hero {
+  position: relative;
   padding: 34px 28px 30px;
+  overflow: hidden;
+  background:
+    linear-gradient(145deg, rgba(255, 244, 220, 0.18), rgba(20, 22, 27, 0.94)),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.05), rgba(12, 13, 17, 0.98));
+}
+
+.hero-glow {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background:
+    radial-gradient(circle at 18% 18%, rgba(255, 244, 220, 0.30), transparent 20%),
+    radial-gradient(circle at 78% 18%, rgba(233, 221, 192, 0.20), transparent 18%),
+    radial-gradient(circle at 50% 78%, rgba(18, 20, 24, 0.24), transparent 26%);
+  filter: blur(72px);
+  opacity: 0.86;
+  pointer-events: none;
+  mix-blend-mode: screen;
 }
 
 .hero::before {
@@ -406,23 +471,24 @@ h3 {
 
 .btn-primary {
   color: #111113;
-  border-color: rgba(255, 250, 242, 0.4);
-  background: linear-gradient(135deg, #f6f1e8 0%, #ddd4c7 100%);
+  border-color: rgba(255, 244, 220, 0.56);
+  background: linear-gradient(135deg, #fbf5e8 0%, #e5ddca 100%);
   box-shadow:
     inset 0 0 0 2px rgba(255, 255, 255, 0.18),
-    0 20px 34px rgba(0, 0, 0, 0.24);
+    0 22px 48px rgba(0, 0, 0, 0.22);
+}
+
+.btn-secondary {
+  color: #f6f1e8;
+  border-color: rgba(255, 244, 220, 0.22);
+  background: rgba(255, 255, 255, 0.07);
+  backdrop-filter: blur(8px);
 }
 
 .btn-primary::before {
   content: ">>";
   margin-right: 4px;
   font-family: "IBM Plex Mono", monospace;
-}
-
-.btn-secondary {
-  color: #f2ede6;
-  border-color: rgba(233, 225, 215, 0.18);
-  background: rgba(26, 26, 29, 0.82);
 }
 
 .btn:hover {
@@ -439,9 +505,21 @@ a:focus-visible,
 
 .glass-panel {
   padding: 24px;
+  position: relative;
+  z-index: 1;
 }
 
-.about-panel {
+.skill-group {
+  min-height: 214px;
+  padding: 24px;
+  position: relative;
+  z-index: 1;
+}
+
+.experience-card {
+  padding: 26px;
+  position: relative;
+  z-index: 1;
   display: grid;
   gap: 12px;
 }
@@ -492,6 +570,8 @@ a:focus-visible,
 .skill-group {
   min-height: 214px;
   padding: 24px;
+  position: relative;
+  z-index: 1;
 }
 
 .skill-index {
@@ -547,6 +627,8 @@ a:focus-visible,
 
 .experience-card {
   padding: 26px;
+  position: relative;
+  z-index: 1;
 }
 
 .experience-head {
@@ -607,20 +689,39 @@ a:focus-visible,
   max-width: 1280px;
   margin: 18px auto 0;
   padding: 0 24px 28px;
+  position: relative;
+}
+
+.footer::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background:
+    radial-gradient(circle at 18% 18%, rgba(255, 244, 220, 0.30), transparent 20%),
+    radial-gradient(circle at 78% 18%, rgba(233, 221, 192, 0.20), transparent 18%),
+    radial-gradient(circle at 50% 78%, rgba(18, 20, 24, 0.24), transparent 26%);
+  filter: blur(72px);
+  opacity: 0.86;
+  pointer-events: none;
+  mix-blend-mode: screen;
 }
 
 .footer-inner {
+  position: relative;
+  overflow: hidden;
   width: 100%;
   max-width: none;
   margin: 0;
   text-align: center;
-  padding: 20px 22px;
-  border: 1px solid rgba(233, 225, 215, 0.12);
+  padding: 24px 26px;
+  border: 1px solid rgba(255, 244, 220, 0.14);
   border-radius: 30px;
-  background:
-    linear-gradient(180deg, rgba(255, 255, 255, 0.04), transparent 26%),
-    linear-gradient(180deg, rgba(30, 30, 33, 0.96), rgba(14, 14, 16, 0.99));
-  box-shadow: 0 20px 42px rgba(0, 0, 0, 0.24);
+  background: rgba(16, 16, 20, 0.76);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.34);
+  z-index: 1;
 }
 
 .footer-kicker {

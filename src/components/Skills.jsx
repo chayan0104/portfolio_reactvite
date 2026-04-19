@@ -36,7 +36,7 @@ export default function Skills() {
     <section className="section" id="skills">
       <div className="section-heading">
         <p className="section-kicker">Capabilities</p>
-        <h2>//skills</h2>
+        <h2>Skills</h2>
       </div>
 
       <div className="skills-grid">

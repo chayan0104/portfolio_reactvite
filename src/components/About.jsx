@@ -39,7 +39,7 @@ export default function About() {
     <section className="section" id="about">
       <div className="section-heading">
         <p className="section-kicker">Profile</p>
-        <h2>//about</h2>
+        <h2>About</h2>
       </div>
 
       <div className="glass-panel about-panel">

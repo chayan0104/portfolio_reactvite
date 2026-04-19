@@ -1,6 +1,7 @@
 export default function Hero() {
   return (
     <section className="section hero" id="top">
+      <div className="hero-glow" aria-hidden="true" />
       <div className="hero-content">
         <img src="/profile1.jpg" alt="Chayan Samanta" className="profile" />
 
