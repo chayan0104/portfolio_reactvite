@@ -2,16 +2,13 @@ export default function Hero() {
   return (
     <section className="section hero" id="top">
       <div className="hero-content">
-        <img src="/profile.jpg" alt="Chayan Samanta" className="profile" />
+        <img src="/profile1.jpg" alt="Chayan Samanta" className="profile" />
 
         <div className="hero-copy">
-          <p className="eyebrow">DevOps Engineer</p>
           <h1>
             Chayan <span>Samanta</span>
           </h1>
-          <p className="hero-tagline">
-            DevOps Engineer || Site Reliability Engineer || Cloud Platform Engineer
-          </p>
+          <p className="hero-tagline">DevOps Engineer</p>
           <p className="hero-summary">
             Results-driven engineer with hands-on ownership of mission-critical BFSI
             environments, focused on secure automation, release governance, and

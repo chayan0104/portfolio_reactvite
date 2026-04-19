@@ -17,6 +17,23 @@ export default function About() {
   const monthLabel = months === 1 ? "month" : "months";
   const experienceText =
     months === 0 ? `${years} ${yearLabel}` : `${years} ${yearLabel} ${months} ${monthLabel}`;
+  const highlights = [
+    {
+      label: "Experience",
+      value: experienceText,
+      description: "delivering enterprise DevOps and SRE outcomes",
+    },
+    {
+      label: "Domain",
+      value: "Banking + Insurance",
+      description: "with security, auditability, and uptime in focus",
+    },
+    {
+      label: "Approach",
+      value: "Automation First",
+      description: "across releases, infrastructure, and governance",
+    },
+  ];
 
   return (
     <section className="section" id="about">
@@ -35,6 +52,16 @@ export default function About() {
           Specialized in CI/CD automation, infrastructure as code, release governance,
           and reliability operations with a strong focus on secure enterprise delivery.
         </p>
+
+        <div className="about-highlights">
+          {highlights.map((highlight) => (
+            <article className="about-highlight" key={highlight.label}>
+              <p className="about-highlight-label">{highlight.label}</p>
+              <p className="about-highlight-value">{highlight.value}</p>
+              <p className="about-highlight-description">{highlight.description}</p>
+            </article>
+          ))}
+        </div>
       </div>
     </section>
   );

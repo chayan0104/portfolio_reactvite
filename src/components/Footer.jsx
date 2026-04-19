@@ -4,6 +4,7 @@ export default function Footer() {
   return (
     <footer className="footer" id="connect">
       <div className="footer-inner">
+        <p className="footer-kicker">Let&apos;s build dependable platforms.</p>
         <p className="footer-title">Open to collaboration and challenging platform work.</p>
 
         <div className="footer-links">
@@ -25,7 +26,7 @@ export default function Footer() {
 
         <p className="footer-text">
           (c) {currentYear} Chayan Samanta | React + Vite | Hosted on AWS | Managed via
-          GoDaddy DNS | Built with Codex.
+          GoDaddy DNS | Crafted for a sharper premium web experience.
         </p>
       </div>
     </footer>
