@@ -26,7 +26,7 @@ export default function Footer() {
 
         <p className="footer-text">
           (c) {currentYear} Chayan Samanta | React + Vite | Hosted on AWS | Managed via
-          GoDaddy DNS | Crafted for a sharper premium web experience.
+          GoDaddy DNS | Made with Codex.
         </p>
       </div>
     </footer>
