@@ -2,8 +2,8 @@
 body {
   margin: 0;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
-  background: radial-gradient(circle at top, #0a0f2c, #020617);
-  color: #e5e7eb;
+  background: linear-gradient(to bottom, #f8f6f2, #faf8f5);
+  color: #2c2c2c;
 }
 
 .container {
@@ -25,9 +25,9 @@ body {
 .project-card {
   margin-top: 0;      /* 🔥 key fix */
   padding: 1.25rem 1.5rem;
-  border-left: 4px solid #fbf5f5;
+  border-left: 4px solid #d4a574;
   border-radius: 12px;
-  background: rgba(255, 255, 255, 0.03);
+  background: rgba(212, 165, 116, 0.05);
 }
 
 .project-card h3 {
@@ -43,7 +43,7 @@ body {
 .footer {
   margin-top: 4rem;
   padding-top: 2rem;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-top: 1px solid rgba(44, 44, 44, 0.1);
   text-align: center;
 }
 
@@ -55,7 +55,7 @@ body {
 }
 
 .footer-links a {
-  color: #feffff;
+  color: #ffffff;
   text-decoration: none;
   font-size: 0.95rem;
 }
@@ -66,5 +66,5 @@ body {
 
 .footer-copy {
   font-size: 0.85rem;
-  color: #ffffff;
+  color: #2c2c2c;
 }

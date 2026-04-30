@@ -10,11 +10,6 @@ export default function Hero() {
             Chayan <span>Samanta</span>
           </h1>
           <p className="hero-tagline">DevOps Engineer</p>
-          <p className="hero-summary">
-            Results-driven engineer with hands-on ownership of mission-critical BFSI
-            environments, focused on secure automation, release governance, and
-            reliability-first platform operations.
-          </p>
 
           <div className="hero-actions">
             <a

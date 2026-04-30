@@ -6,10 +6,6 @@ export default function Projects() {
       <div className="section-heading">
         <p className="section-kicker">Work</p>
         <h2>Experience</h2>
-        <p className="section-note">
-          Enterprise DevOps delivery across banking and insurance with measurable reliability
-          and release-performance impact.
-        </p>
       </div>
 
       <div className="experience-list">

@@ -1,42 +1,51 @@
 export default function Skills() {
   const skillGroups = [
     {
-      title: "Cloud and Infrastructure",
-      items: ["AWS", "Azure", "Terraform", "CloudFormation"],
-      accent: "Cloud-ready foundations",
+      title: "Platforms & Infrastructure",
+      items: ["AWS", "On-Prem", "Infrastructure Provisioning"],
+      accent: "Cloud and on-premises solutions",
     },
     {
-      title: "CI/CD and Source Control",
+      title: "Containers & Orchestration",
+      items: ["Docker", "Docker Compose", "Kubernetes", "Helm"],
+      accent: "Modern workload deployment",
+    },
+    {
+      title: "CI/CD & Release Management",
       items: ["Jenkins", "AWS CodePipeline", "CodeDeploy", "GitHub", "Bitbucket"],
-      accent: "Release systems that scale",
+      accent: "Enterprise delivery pipelines",
     },
     {
-      title: "Containers and Runtime",
-      items: ["Docker", "Kubernetes"],
-      accent: "Modern workload delivery",
+      title: "Secure Infrastructure Automation",
+      items: [
+        "Terraform",
+        "CloudFormation",
+        "HCL",
+        "Checkmarx",
+        "Black Duck",
+        "Fortify",
+        "JFrog",
+        "Trivy",
+      ],
+      accent: "Provisioning, compliance, and security guardrails",
     },
     {
-      title: "Languages and Config",
-      items: ["Python", "Bash/Shell", "Java", "YAML", "HCL"],
-      accent: "Automation and configuration fluency",
+      title: "Monitoring & Observability",
+      items: ["CloudWatch", "Prometheus", "Grafana", "Dynatrace"],
+      accent: "Full-stack visibility and insights",
     },
     {
-      title: "Observability",
-      items: ["CloudWatch", "Grafana"],
-      accent: "Signals, health, and visibility",
-    },
-    {
-      title: "Security Tooling",
-      items: ["Checkmarx", "Black Duck", "Fortify", "SonarQube"],
-      accent: "Built for enterprise compliance",
+      title: "Scripting & Programming",
+      items: ["Python", "Bash/Shell", "YAML", "Java", "Groovy"],
+      accent: "Automation and configuration",
     },
   ];
 
   return (
     <section className="section" id="skills">
       <div className="section-heading">
-        <p className="section-kicker">Capabilities</p>
-        <h2>Skills</h2>
+        <p className="section-kicker">Technical Stack</p>
+        <h2>Skills & Tools</h2>
       </div>
 
       <div className="skills-grid">

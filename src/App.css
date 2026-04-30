@@ -13,6 +13,7 @@
   margin-top: 0;
   margin-bottom: 14px;
   font-size: 28px;
+  color: #2c2c2c;
 }
 
 /* ==============================
@@ -20,11 +21,12 @@
 ============================== */
 
 .glass-box {
-  background: rgba(255, 255, 255, 0.04);
+  background: rgba(255, 255, 255, 0.6);
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
   border-radius: 16px;
   padding: 28px 24px;
+  border: 1px solid rgba(212, 165, 116, 0.2);
 }
 
 /* Space between heading and glass box */
@@ -48,20 +50,23 @@
 ============================== */
 
 .project-card {
-  background: rgba(255, 255, 255, 0.04);
+  background: rgba(255, 255, 255, 0.4);
   padding: 18px 22px;
   border-radius: 12px;
   margin-top: 14px;
+  border: 1px solid rgba(212, 165, 116, 0.15);
 }
 
 .project-card h3 {
   margin: 0 0 8px 0;
   font-size: 18px;
+  color: #2c2c2c;
 }
 
 .project-card ul {
   margin: 0;
   padding-left: 18px;
+  color: #6b6b6b;
 }
 
 .project-card li {
