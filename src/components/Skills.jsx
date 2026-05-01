@@ -3,7 +3,7 @@ export default function Skills() {
     {
       title: "Platforms & Infrastructure",
       items: ["AWS", "On-Prem", "Infrastructure Provisioning"],
-      accent: "Cloud and on-premises solutions",
+      accent: "Cloud and on-prem foundations",
     },
     {
       title: "Containers & Orchestration",
@@ -44,23 +44,32 @@ export default function Skills() {
   return (
     <section className="section" id="skills">
       <div className="section-heading">
-        <p className="section-kicker">Technical Stack</p>
-        <h2>Skills & Tools</h2>
+        <p className="section-kicker">Technical stack</p>
+        <h2>Toolbox</h2>
       </div>
 
-      <div className="skills-grid">
-        {skillGroups.map((group, index) => (
-          <article className="skill-group" key={group.title}>
-            <p className="skill-index">0{index + 1}</p>
-            <h3>{group.title}</h3>
-            <p className="skill-accent">{group.accent}</p>
-            <ul className="skills-compact">
-              {group.items.map((item) => (
-                <li key={item}>{item}</li>
-              ))}
-            </ul>
-          </article>
-        ))}
+      <div className="paper-panel skills-shell">
+        <div className="skills-shell-head">
+          <p className="panel-chip">Execution map</p>
+          <p className="section-note">
+            Delivery workflows, infra automation, runtime visibility, and release safety nets.
+          </p>
+        </div>
+
+        <div className="skills-grid">
+          {skillGroups.map((group, index) => (
+            <article className="skill-group" key={group.title}>
+              <p className="skill-index">0{index + 1}</p>
+              <h3>{group.title}</h3>
+              <p className="skill-accent">{group.accent}</p>
+              <ul className="skills-compact">
+                {group.items.map((item) => (
+                  <li key={item}>{item}</li>
+                ))}
+              </ul>
+            </article>
+          ))}
+        </div>
       </div>
     </section>
   );

@@ -1,47 +1,28 @@
 export default function About() {
-  const startDate = new Date(2021, 3, 1);
-  const today = new Date();
-
-  let totalMonths =
-    (today.getFullYear() - startDate.getFullYear()) * 12 +
-    (today.getMonth() - startDate.getMonth());
-
-  if (today.getDate() < startDate.getDate()) {
-    totalMonths -= 1;
-  }
-
-  const adjustedMonths = Math.max(0, totalMonths);
-  const years = Math.floor(adjustedMonths / 12);
-  const months = adjustedMonths % 12;
-  const yearLabel = years === 1 ? "year" : "years";
-  const monthLabel = months === 1 ? "month" : "months";
-  const experienceText =
-    months === 0
-      ? `${years} ${yearLabel}`
-      : `${years} ${yearLabel} ${months} ${monthLabel}`;
-
   const highlights = [
-    {
-      label: "Experience",
-      value: experienceText,
-      description: "enterprise DevOps and SRE",
-    },
     {
       label: "Domain",
       value: "Banking + Insurance",
       description: "with security, auditability, and uptime in focus",
+    },
+    {
+      label: "Mode",
+      value: "Hands-on",
+      description: "from build pipelines to production incidents and RCA",
     },
   ];
 
   return (
     <section className="section" id="about">
       <div className="section-heading">
-        <p className="section-kicker">Professional Summary</p>
-        <h2>About</h2>
+        <p className="section-kicker">Professional summary</p>
+        <h2>Profile</h2>
       </div>
 
-      <div className="glass-panel about-panel">
+      <div className="paper-panel about-panel">
         <div className="about-copy">
+          <p className="panel-chip">Snapshot</p>
+          
           <p className="about-summary">
             DevOps Engineer with 5+ years of experience designing, automating, and
             operating highly available, secure, and scalable systems in BFSI

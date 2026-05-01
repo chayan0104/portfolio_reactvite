@@ -5,20 +5,33 @@ import Projects from "./components/Projects";
 import Footer from "./components/Footer";
 
 export default function App() {
+  const navItems = [
+    { href: "#about", label: "Profile", step: "01" },
+    { href: "#skills", label: "Toolbox", step: "02" },
+    { href: "#experience", label: "Worklog", step: "03" },
+    { href: "#connect", label: "Connect", step: "04" },
+  ];
+
   return (
     <div className="site">
-      <div className="bg-layer bg-layer-one" aria-hidden="true" />
-      <div className="bg-layer bg-layer-two" aria-hidden="true" />
-
       <header className="topbar">
-        <a className="topbar-brand" href="#top" aria-label="Back to top">
-          CS
-        </a>
+        <div className="topbar-brand-block">
+          <a className="topbar-brand" href="#top" aria-label="Back to top">
+            CS
+          </a>
+          <div className="topbar-brand-copy">
+            <p className="topbar-kicker">Chayan Samanta</p>
+            <p className="topbar-title">DevOps Portfolio</p>
+          </div>
+        </div>
+
         <nav className="topbar-nav" aria-label="Primary navigation">
-          <a href="#about">About</a>
-          <a href="#skills">Skills</a>
-          <a href="#experience">Experience</a>
-          <a href="#connect">Connect</a>
+          {navItems.map((item) => (
+            <a className="topbar-step" href={item.href} key={item.href}>
+              <span className="topbar-step-number">{item.step}</span>
+              <span className="topbar-step-label">{item.label}</span>
+            </a>
+          ))}
         </nav>
       </header>
 

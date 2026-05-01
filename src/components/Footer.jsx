@@ -5,28 +5,12 @@ export default function Footer() {
     <footer className="footer" id="connect">
       <div className="footer-inner">
         <p className="footer-kicker">Let&apos;s build dependable platforms.</p>
-        <p className="footer-title">Open to collaboration and challenging platform work.</p>
-
-        <div className="footer-links">
-          <a
-            href="https://github.com/chayan0104?tab=repositories"
-            target="_blank"
-            rel="noreferrer"
-          >
-            GitHub
-          </a>
-          <a
-            href="https://in.linkedin.com/in/chayan-samanta-a01856100"
-            target="_blank"
-            rel="noreferrer"
-          >
-            LinkedIn
-          </a>
-        </div>
+        <p className="footer-title">
+          Open to collaboration on delivery engineering, cloud platforms, and reliability work.
+        </p>
 
         <p className="footer-text">
-          (c) {currentYear} Chayan Samanta | React + Vite | Hosted on AWS | Managed via
-          GoDaddy DNS | Made with Codex.
+          © {currentYear} Chayan Samanta | React + Vite | Hosted on AWS | Managed via GoDaddy DNS | Made with Codex.
         </p>
       </div>
     </footer>
