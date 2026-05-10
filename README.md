@@ -1,16 +1,18 @@
 # DevOps Portfolio App
 
-A personal portfolio web application built with React and Vite to showcase a DevOps and Site Reliability Engineer profile. The site highlights professional summary, core skills, enterprise experience, and social links in a clean single-page layout.
+A modern developer portfolio built with React and Vite for showcasing DevOps and Site Reliability Engineering experience.
+
+## Overview
+
+This project is a single-page portfolio application that highlights professional summary, technical skills, enterprise experience, and contact links. It includes a development workflow with Vite and a production-ready Docker deployment powered by Nginx.
 
 ## Features
 
-- Hero section with profile image, role summary, and external links
-- About section with dynamically calculated experience duration
-- Skills section grouped by cloud, CI/CD, containers, observability, and security tooling
-- Experience section for enterprise project highlights
-- Footer with collaboration call-to-action and social links
-- Production-ready Docker setup with multi-stage build and Nginx serving
-- SPA-friendly Nginx configuration for client-side routing safety
+- Responsive portfolio layout with Hero, About, Skills, Projects, and Footer sections
+- Reusable React components with clean structure
+- Dockerized build and runtime setup for production deployment
+- Nginx configuration optimized for SPA routing
+- Easy customization via component and data files
 
 ## Tech Stack
 
@@ -25,26 +27,27 @@ A personal portfolio web application built with React and Vite to showcase a Dev
 
 ```text
 portfolio_reactvite/
-|-- public/
-|   |-- profile.jpg
-|-- src/
-|   |-- components/
-|   |   |-- About.jsx
-|   |   |-- Footer.jsx
-|   |   |-- Hero.jsx
-|   |   |-- Projects.jsx
-|   |   `-- Skills.jsx
-|   |-- data/
-|   |   `-- projects.js
-|   |-- App.jsx
-|   |-- App.css
-|   |-- index.css
-|   |-- main.jsx
-|-- Dockerfile
-|-- docker-compose.yml
-|-- nginx.conf
-|-- package.json
-`-- vite.config.js
+├── Dockerfile
+├── docker-compose.yml
+├── nginx.conf
+├── package.json
+├── README.md
+├── vite.config.js
+├── public/
+│   └── profile.jpg
+└── src/
+    ├── App.jsx
+    ├── App.css
+    ├── index.css
+    ├── main.jsx
+    ├── components/
+    │   ├── About.jsx
+    │   ├── Footer.jsx
+    │   ├── Hero.jsx
+    │   ├── Projects.jsx
+    │   └── Skills.jsx
+    └── data/
+        └── projects.js
 ```
 
 ## Getting Started
@@ -52,16 +55,22 @@ portfolio_reactvite/
 ### Prerequisites
 
 - Node.js 20 or later
-- npm
+- npm 10 or later
+- Docker (optional, for containerized deployment)
+
+### Install Dependencies
+
+```bash
+npm install
+```
 
 ### Run Locally
 
 ```bash
-npm install
 npm run dev
 ```
 
-Open the app in your browser at the Vite development URL shown in the terminal, usually `http://localhost:5173`.
+Open the app in your browser at the URL shown in the terminal, typically `http://localhost:5173`.
 
 ### Build for Production
 
@@ -69,52 +78,50 @@ Open the app in your browser at the Vite development URL shown in the terminal, 
 npm run build
 ```
 
-The production files will be generated in the `dist/` directory.
+Production assets are generated in the `dist/` folder.
 
-### Preview the Production Build
+### Preview Production Build
 
 ```bash
 npm run preview
 ```
 
-## Run with Docker
+## Docker Deployment
 
-### Build and Start with Docker Compose
+### Start with Docker Compose
 
 ```bash
 docker compose up --build
 ```
 
-The application will be available at `http://localhost:8080`.
+Then open `http://localhost:8080`.
 
-### Build the Image Manually
+### Build and Run the Image
 
 ```bash
-docker build -t react-portfolio .
-docker run -p 8080:80 react-portfolio
+docker build -t devops-portfolio .
+docker run -p 8080:80 devops-portfolio
 ```
 
-## Customizing the Portfolio
+## Customize Your Portfolio
 
-Update these files to personalize the portfolio:
+Edit these files to personalize the content:
 
-- `src/components/Hero.jsx` for name, title, summary, and primary links
-- `src/components/About.jsx` for the profile description and experience start date
-- `src/components/Skills.jsx` for skills and capability groups
-- `src/data/projects.js` for company and experience entries
-- `src/components/Footer.jsx` for footer text and contact links
-- `public/profile.jpg` for the profile image
+- `src/components/Hero.jsx` – name, title, summary, hero buttons, and main links
+- `src/components/About.jsx` – profile story, experience text, and personal details
+- `src/components/Skills.jsx` – skills, tools, and categories
+- `src/data/projects.js` – project and enterprise experience entries
+- `src/components/Footer.jsx` – footer messaging, calls-to-action, and contact links
+- `public/profile.jpg` – profile image asset
 
-## Deployment Notes
+## Notes on Production Setup
 
-The included `Dockerfile` uses a multi-stage build:
+The included `Dockerfile` performs a multi-stage build:
 
-1. Build the React application with Node.js
-2. Serve the generated static files through Nginx
+1. Use Node.js and Vite to build the React app
+2. Copy the output to an Nginx image for static hosting
 
-The `nginx.conf` file includes a `try_files` fallback so the app can safely serve single-page routes.
-
-If you want to deploy this app into Kubernetes from this repository, review the manifests in `../../kube_configs/` first. They are generic Nginx examples and should be updated with the correct image, labels, namespace, and service settings for this portfolio app.
+The `nginx.conf` file uses `try_files $uri /index.html` so single-page application routes resolve correctly.
 
 ## Author
 
