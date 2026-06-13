@@ -4,7 +4,6 @@ export default function Projects() {
   return (
     <section className="section" id="experience">
       <div className="section-heading">
-        <p className="section-kicker">Work</p>
         <h2>Worklog</h2>
       </div>
 
@@ -12,13 +11,8 @@ export default function Projects() {
         {projects.map((project) => (
           <article className="experience-card" key={project.company}>
             <div className="experience-head">
-              <p className="experience-label">{project.label}</p>
               <h3 className="experience-company">{project.company}</h3>
               <p className="experience-role">{project.role}</p>
-            </div>
-            <div className="experience-status">
-              <span className="status-pill status-green">Production systems</span>
-              <span className="status-pill status-yellow">Compliance-driven</span>
             </div>
             {project.tags.length > 0 ? (
               <div className="experience-tags" aria-label="Industry highlights">

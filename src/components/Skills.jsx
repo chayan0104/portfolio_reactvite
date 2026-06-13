@@ -2,24 +2,25 @@ export default function Skills() {
   const skillGroups = [
     {
       title: "Platforms & Infrastructure",
-      items: ["AWS", "On-Prem", "Infrastructure Provisioning"],
-      accent: "Cloud and on-prem foundations",
+      items: ["AWS", "On-Prem RHEL", "Linux", "Infrastructure Provisioning"],
+      accent: "Cloud and on-prem foundations for regulated production systems",
     },
     {
       title: "Containers & Orchestration",
-      items: ["Docker", "Docker Compose", "Kubernetes", "Helm"],
-      accent: "Modern workload deployment",
+      items: ["Docker", "Docker Compose", "Kubernetes", "ECR", "EKS"],
+      accent: "Containerized workloads, orchestration, and deployment control",
     },
     {
-      title: "CI/CD & Release Management",
-      items: ["Jenkins", "AWS CodePipeline", "CodeDeploy", "GitHub", "Bitbucket"],
-      accent: "Enterprise delivery pipelines",
+      title: "CI/CD & Version Control",
+      items: ["Jenkins", "AWS CodePipeline", "CodeDeploy", "GitHub", "Bitbucket" ,"Jfrog" ],
+      accent: "Automated release pipelines with controlled enterprise delivery",
     },
     {
-      title: "Secure Infrastructure Automation",
+      title: "Infrastructure as Code & Security",
       items: [
         "Terraform",
-        "CloudFormation",
+        "Sonarqube",
+        "Vault",
         "HCL",
         "Checkmarx",
         "Black Duck",
@@ -27,39 +28,30 @@ export default function Skills() {
         "JFrog",
         "Trivy",
       ],
-      accent: "Provisioning, compliance, and security guardrails",
+      accent: "Provisioning, compliance, and DevSecOps guardrails",
     },
     {
-      title: "Monitoring & Observability",
-      items: ["CloudWatch", "Prometheus", "Grafana", "Dynatrace"],
-      accent: "Full-stack visibility and insights",
+      title: "Monitoring & Logging",
+      items: ["CloudWatch", "Prometheus", "Grafana", "Dynatrace","New Relic"] ,
+      accent: "Runtime visibility, alerting, and performance diagnostics",
     },
     {
-      title: "Scripting & Programming",
-      items: ["Python", "Bash/Shell", "YAML", "Java", "Groovy"],
-      accent: "Automation and configuration",
+      title: "Scripting, Programming & Practice",
+      items: ["Python", "Bash/Shell", "YAML", "Groovy", "SRE", "DevOps"],
+      accent: "Automation, troubleshooting, and reliability engineering practice",
     },
   ];
 
   return (
     <section className="section" id="skills">
       <div className="section-heading">
-        <p className="section-kicker">Technical stack</p>
-        <h2>Toolbox</h2>
+        <h2>Technical stack</h2>
       </div>
 
       <div className="paper-panel skills-shell">
-        <div className="skills-shell-head">
-          <p className="panel-chip">Execution map</p>
-          <p className="section-note">
-            Delivery workflows, infra automation, runtime visibility, and release safety nets.
-          </p>
-        </div>
-
         <div className="skills-grid">
-          {skillGroups.map((group, index) => (
+          {skillGroups.map((group) => (
             <article className="skill-group" key={group.title}>
-              <p className="skill-index">0{index + 1}</p>
               <h3>{group.title}</h3>
               <p className="skill-accent">{group.accent}</p>
               <ul className="skills-compact">

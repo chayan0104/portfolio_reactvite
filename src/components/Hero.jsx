@@ -42,7 +42,6 @@ export default function Hero() {
             <img src="/profile1.jpg" alt="Chayan Samanta" className="profile profile-main" />
 
             <div className="hero-copy">
-              <p className="eyebrow">Platform systems engineer</p>
               <h1>
                 Chayan <span>Samanta</span>
               </h1>
@@ -69,7 +68,7 @@ export default function Hero() {
           </div>
 
           <div className="hero-meta">
-            <div className="hero-meta-card">
+            <div className="hero-meta-card hero-meta-card-inline">
               <p className="hero-meta-label">Role</p>
               <p className="hero-meta-value">DevOps + SRE</p>
             </div>
@@ -81,16 +80,10 @@ export default function Hero() {
         </div>
 
         <aside className="hero-panel" aria-label="Current operating themes">
-          <div className="hero-panel-head">
-            <p className="hero-panel-title">Operational priorities</p>
-          </div>
-
           <div className="checkpoint-list">
             {checkpoints.map((checkpoint) => (
               <article className={`checkpoint-card checkpoint-${checkpoint.tone}`} key={checkpoint.title}>
-                <div className="checkpoint-icon" aria-hidden="true">
-                  OK
-                </div>
+                <div className="checkpoint-icon" aria-hidden="true" />
                 <div>
                   <h2>{checkpoint.title}</h2>
                   <p>{checkpoint.description}</p>

@@ -6,8 +6,8 @@ import Footer from "./components/Footer";
 
 export default function App() {
   const navItems = [
-    { href: "#about", label: "Profile", step: "01" },
-    { href: "#skills", label: "Toolbox", step: "02" },
+    { href: "#about", label: "Professional summary", step: "01" },
+    { href: "#skills", label: "Technical stack", step: "02" },
     { href: "#experience", label: "Worklog", step: "03" },
     { href: "#connect", label: "Connect", step: "04" },
   ];
