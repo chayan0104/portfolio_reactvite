@@ -7,7 +7,7 @@ export default function Skills() {
     },
     {
       title: "Containers & Orchestration",
-      items: ["Docker", "Docker Compose", "Kubernetes", "ECR", "EKS"],
+      items: ["Docker", "Docker Compose", "Kubernetes", "Helm", "ECR", "EKS"],
       accent: "Containerized workloads, orchestration, and deployment control",
     },
     {
