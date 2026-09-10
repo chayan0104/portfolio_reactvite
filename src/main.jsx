@@ -3,7 +3,7 @@ import { createRoot } from 'react-dom/client';
 import {
   ArrowUpRight, BarChart3, BriefcaseBusiness, Cloud, Container,
   GitBranch, Github, Linkedin, Mail, Network, Rocket, Server,
-  ShieldCheck, Wrench, Layers3, Menu, X
+  ShieldCheck, Wrench, Layers3
 } from 'lucide-react';
 import './styles.css';
 
@@ -48,7 +48,6 @@ function SectionTitle({title, eyebrow}) {
 }
 
 function App() {
-  const [menuOpen, setMenuOpen] = React.useState(false);
   const nav = [
     ['About','#about'], ['Stack','#skills'], ['Experience','#experience'],
     ['Certifications','#certifications'], ['Contact','#contact']
@@ -57,15 +56,12 @@ function App() {
   return (
     <div className="site">
       <header className="topbar">
-        <a href="#top" className="brand" onClick={()=>setMenuOpen(false)}>
+        <a href="#top" className="brand">
           <span className="brand-badge">CS</span>
           <span className="brand-copy"><strong>Chayan Samanta</strong><small>DevOps Portfolio</small></span>
         </a>
-        <button className="menu-button" onClick={()=>setMenuOpen(v=>!v)} aria-label="Toggle navigation">
-          {menuOpen ? <X size={20}/> : <Menu size={20}/>}
-        </button>
-        <nav className={menuOpen ? 'nav open' : 'nav'}>
-          {nav.map(([label,href]) => <a key={href} href={href} onClick={()=>setMenuOpen(false)}>{label}</a>)}
+        <nav className="nav">
+          {nav.map(([label,href]) => <a key={href} href={href}>{label}</a>)}
         </nav>
       </header>
 
@@ -180,18 +176,20 @@ function App() {
 
         <section className="section wrap principles" id="principles">
           <SectionTitle title="Engineering approach" eyebrow="PRINCIPLES"/>
-          <div className="principle-grid">
-            {[
-              [Wrench,'Automate','repetitive work.'],
-              [ShieldCheck,'Design for','safe releases.'],
-              [BarChart3,'Observe what','reaches production.'],
-              [Network,'Troubleshoot','from evidence.'],
-              [Layers3,'Prefer simple,','repeatable systems.']
-            ].map(([Icon,a,b])=>(
-              <div className="principle" key={a}>
-                <Icon size={25}/><span>{a}<small>{b}</small></span>
-              </div>
-            ))}
+          <div className="principle-wrap">
+            <div className="principle-grid">
+              {[
+                [Wrench,'Automate','repetitive work.'],
+                [ShieldCheck,'Design for','safe releases.'],
+                [BarChart3,'Observe what','reaches production.'],
+                [Network,'Troubleshoot','from evidence.'],
+                [Layers3,'Prefer simple,','repeatable systems.']
+              ].map(([Icon,a,b])=>(
+                <div className="principle" key={a}>
+                  <Icon size={25}/><span>{a}<small>{b}</small></span>
+                </div>
+              ))}
+            </div>
           </div>
         </section>
       </main>
