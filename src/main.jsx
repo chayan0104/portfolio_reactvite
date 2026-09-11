@@ -154,8 +154,8 @@ function App() {
             <div className="exp-content">
               <h3>Tata Consultancy Services Ltd.</h3>
               <div className="clients">
-                <div><span className="client-bullet"/>Citi Bank (APAC/EMEA)</div>
-                <div><span className="client-bullet"/>Bajaj General Insurance (Bajaj Allianz)</div>
+                <div><span className="client-bullet"/>Citibank - Singapore</div>
+                <div><span className="client-bullet"/>Bajaj General Insurance </div>
               </div>
             </div>
           </div>
