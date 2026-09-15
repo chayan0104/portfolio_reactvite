@@ -25,7 +25,7 @@ const stack = [
   { icon:GitBranch, title:'CI/CD & Automation', items:['Jenkins','GitHub','Bitbucket','JFrog Artifactory','Bash','Python','Groovy'] },
   { icon:ShieldCheck, title:'DevSecOps & Security', items:['SonarQube','Checkmarx','Fortify','Black Duck','Trivy','Checkov','OWASP'] },
   { icon:BarChart3, title:'Monitoring & Observability', items:['Dynatrace','Prometheus','Grafana','CloudWatch'] },
-  { icon:Server, title:'Applications & Platforms', items:['Linux','RHEL','WildFly','JBoss','Java'] },
+  { icon:Server, title:'Applications & Platforms', items:['Linux','RHEL','Weblogic','JBoss','Java'] },
 ];
 
 const certifications = [
